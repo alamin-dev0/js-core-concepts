@@ -54,6 +54,38 @@ const numbers = [1, 2, 3, 4, 5];
 //     doubled.push(number * 2);
 // }
 
-const doubledIt = num => num * 2;
-const doubled = numbers.map(doubledIt);
-console.log(doubled); // Output: [2, 4, 6, 8, 10]
+// const doubledIt = num => num * 2;
+// const doubled = numbers.map(doubledIt);
+
+
+const doubled = numbers.map(num => num * 2);
+const squared = numbers.map(num => num * num);
+
+
+const friends = ['Zaved', 'Rashed', 'Sayed', 'khaled'];
+const firstLetters = friends.map(frd => frd[0]);
+
+
+const products = [
+    { name: 'Laptop', price: 1000 },
+    { name: 'Phone', price: 500 },
+    { name: 'Tablet', price: 300 }
+];
+const prices = products.map(pd => pd.price * 2); // This will create a new array containing the prices of the products multiplied by 2.
+
+
+
+const names = products.map((pd, index, productsArray) => {
+
+    const upperCaseName = pd.name.toUpperCase(); // This will convert the product name to uppercase.
+    console.log(index, upperCaseName, productsArray); // This will log the index and the uppercase name to the console for debugging purposes.
+    return upperCaseName; // This will return the uppercase name to be included in the new array.
+})
+
+
+
+
+// console.log(squared); // Output: [1, 4, 9, 16, 25]
+// console.log(doubled); // Output: [2, 4, 6, 8, 10]
+// console.log(firstLetters); // Output: ['Z', 'R', 'S', 'k']
+// console.log(prices); // Output: [1000, 500, 300]
