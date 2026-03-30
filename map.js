@@ -85,7 +85,14 @@ const names = products.map((pd, index, productsArray) => {
 
 
 
-// console.log(squared); // Output: [1, 4, 9, 16, 25]
-// console.log(doubled); // Output: [2, 4, 6, 8, 10]
-// console.log(firstLetters); // Output: ['Z', 'R', 'S', 'k']
-// console.log(prices); // Output: [1000, 500, 300]
+console.log(squared); // Output: [1, 4, 9, 16, 25]
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+console.log(firstLetters); // Output: ['Z', 'R', 'S', 'k']
+console.log(prices); // Output: [1000, 500, 300]
+console.log(names); // Output: ['LAPTOP', 'PHONE', 'TABLET']
+
+
+
+const result = products.forEach(product => console.log(product.name)); // This will log the name of each product to the console.
+
+console.log(result); // Output: undefined (forEach does not return a new array, it returns undefined)
